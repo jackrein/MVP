@@ -1,0 +1,46 @@
+/* GLOBAL STYLES
+ * Padding below the footer and lighter body text
+* -------------------------------------------------- */
+
+  body {
+    padding-bottom: 40px;
+    color: #5a5a5a;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 25px;
+  }
+
+  .pull-right {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  /* CAROUSEL
+  -------------------------------------------------- */
+
+  /* Carousel base class */
+  .carousel {
+    height: 500px;
+    width: 600px;
+    margin: 25px auto 60px;
+  }
+
+  /* Declare heights because of positioning of img element */
+  .carousel .item {
+    position: relative;
+    height: 500px;
+    background-color: lightblue;
+  }
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: auto;
+    height: 500px;
+  }
+
+  @import "../node_modules/bootstrap/scss/bootstrap";
