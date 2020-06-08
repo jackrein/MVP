@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import ControlledCarousel from './components/Carousel.jsx';
@@ -9,24 +8,18 @@ import './custom.scss';
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      photos: []
-    }
+      currentPic: {}
+    };
   }
 
-  componentDidMount() {
-    $.ajax({
-      url: '/photos',
-      success: (data) => {
-        console.log('data: ', data)
-        this.setState({
-          photos: data
-        })
-      },
-      error: (err) => {
-        console.log('err', err);
-      }
-    });
+  componentDidMount(photo_id) {
+    fetch(`http://localhost:5000/photos/${photo_id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({currentPic: data});
+      })
   }
 
   render () {
@@ -35,10 +28,10 @@ class App extends React.Component {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand>Journey to Myself</Navbar.Brand>
           <Nav className="mr-auto">
-            <Navbar.Text className="pull-right" href="#features">About</Navbar.Text>
+            <Navbar.Text className="pull-right">About</Navbar.Text>
           </Nav>
         </Navbar>
-        <ControlledCarousel photos={this.state.photos} currentPic={this.state.currentPic} />
+        <ControlledCarousel currentPic={this.state.currentPic} />
         <footer>
           <p>&copy; 2020 Jackson Reinagel </p>
         </footer>
