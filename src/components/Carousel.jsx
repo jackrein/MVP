@@ -11,7 +11,7 @@ const ControlledCarousel = ({ photos, currentPic }) => {
             <Carousel.Item key={photo.photo_id}>
               <Image src={photo.url} alt={photo.date} fluid />
               <Carousel.Caption>
-                <p>{photo.date}</p>
+                <p>Time on T: {photo.t_time} &nbsp; ({photo.date})</p>
               </Carousel.Caption>
             </Carousel.Item>
           ))}

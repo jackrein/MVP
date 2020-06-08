@@ -23,6 +23,8 @@ class App extends React.Component {
   }
 
   render () {
+
+
     return (
       <div className="app">
         <Navbar bg="dark" variant="dark">
@@ -32,11 +34,16 @@ class App extends React.Component {
           </Nav>
         </Navbar>
         <ControlledCarousel photos={this.state.photos} />
+        <div className="slidecontainer">
+          <input type="range" min="0" max="70" defaultValue="0" className="slider" id="slider" />
+          <p>Months on T: <span id="label">{this.state.currentPic.t_time}</span></p>
+        </div>
         <footer>
           <p>&copy; 2020 Jackson Reinagel </p>
         </footer>
       </div>
     )
+
   }
 }
 

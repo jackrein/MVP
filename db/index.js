@@ -14,6 +14,7 @@ db.once('open', function() {
 var photoSchema = mongoose.Schema({
   photo_id: Number,
   date: Date.parse(),
+  t_time: String,
   url: String
 });
 
