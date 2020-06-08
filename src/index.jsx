@@ -10,8 +10,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: [],
-      currentPic: {}
+      photos: []
     }
   }
 
@@ -19,7 +18,7 @@ class App extends React.Component {
     $.ajax({
       url: '/photos',
       success: (data) => {
-        console.log(data)
+        console.log('data: ', data)
         this.setState({
           photos: data
         })

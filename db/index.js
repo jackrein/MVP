@@ -19,15 +19,4 @@ var photoSchema = mongoose.Schema({
 
 var Photo = mongoose.model('Photo', photoSchema);
 
-var selectAll = function(callback) {
-  Photo.find({}, function(err, photos) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, photos);
-    }
-  });
-};
-
-module.exports.selectAll = selectAll;
-// module.exports = Photo;      // uncomment to seed db
+module.exports = Photo;
