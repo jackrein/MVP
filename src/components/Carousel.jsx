@@ -1,39 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image';
 
 const ControlledCarousel = ({ photos, currentPic }) => {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-         {console.log('photos: ', photos)}
-         <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://selfieline.s3.us-east-2.amazonaws.com/2014_07_06.jpg"
-          alt="First slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://selfieline.s3.us-east-2.amazonaws.com/2014_07_06.jpg"
-          alt="Second slide"
-        />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://selfieline.s3.us-east-2.amazonaws.com/2014_11_27.jpg"
-          alt="Third slide"
-        />
-      </Carousel.Item>
-    </Carousel>
+    <div>
+      <Carousel>
+          {console.log('photos: ', photos)}
+          {photos.map(photo => (
+            <Carousel.Item key={photo.photo_id}>
+              <Image src={photo.url} alt={photo.date} fluid />
+              <Carousel.Caption>
+                <p>{photo.date}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+      </Carousel>
+    </div>
   );
-}
+};
 
 export default ControlledCarousel;

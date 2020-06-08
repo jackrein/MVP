@@ -13,7 +13,7 @@ db.once('open', function() {
 
 var photoSchema = mongoose.Schema({
   photo_id: Number,
-  date: Date,
+  date: Date.parse(),
   url: String
 });
 

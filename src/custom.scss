@@ -3,6 +3,12 @@
 * -------------------------------------------------- */
   @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
+  .app {
+    background-color: lightblue;
+    padding-bottom: 25px;
+    font-family: 'Architects Daughter', cursive;
+  }
+
   body {
     padding-bottom: 40px;
     color: #5a5a5a;
@@ -12,21 +18,12 @@
     position: absolute;
     bottom: 20px;
     padding-left: 25px;
-    font-family: 'Architects Daughter', cursive;
   }
 
   .pull-right {
     position: absolute;
     right: 15px;
     bottom: 10px;
-  }
-
-    /* NAVBAR
-  -------------------------------------------------- */
-
-  /* Navbar base class */
-  .navbar {
-    font-family: 'Architects Daughter', cursive;
   }
 
   /* CAROUSEL
@@ -36,16 +33,15 @@
   .carousel {
     height: 700px;
     width: 600px;
-    margin: 28px auto 60px;
+    margin: 60px auto;
   }
 
   /* Declare heights because of positioning of img element */
   .carousel-item {
     position: absolute;
     height: 700px;
-    background-color: lightblue;
   }
-  .carousel-inner > img {
+  img.carousel-inner {
     position: absolute;
     top: 0;
     left: auto;
