@@ -31,7 +31,6 @@ class App extends React.Component {
   };
 
   slide(e) {
-    console.log(e.target.value, this.state.currentPic);
     if (e.target.value < 1) {this.setState({ currentPic: this.state.photos[0] })}
     else if (e.target.value < 3) {this.setState({ currentPic: this.state.photos[1] })}
     else if (e.target.value < 5) {this.setState({ currentPic: this.state.photos[2] })}
@@ -57,11 +56,11 @@ class App extends React.Component {
           </Nav>
         </Navbar>
         <p id="blurb" style={{ display: this.state.show ? "block" : "none" }}>This project is a reflection on my physical transition.
-        It covers my first six years on T. Click through to see how I've changed!</p>
-        <ControlledCarousel photos={this.state.photos} currentPic={this.state.currentPic} />
+        It covers my first six years on testosterone. Click through to see how I've changed!</p>
+        <ControlledCarousel currentPic={this.state.currentPic} />
         <div className="slidecontainer">
           <input type="range" min="0" max="70" defaultValue="0" className="slider" onChange={this.slide}/>
-          <p>Months on T: <span id="label">{this.state.currentPic.t_time}</span></p>
+          <p>Time on T: <span id="label">{this.state.currentPic.t_time}</span></p>
         </div>
         <footer>
           <p>&copy; 2020 Jackson Reinagel </p>

@@ -10,7 +10,6 @@
   }
 
   body {
-    padding-bottom: 40px;
     color: #5a5a5a;
   }
 
@@ -70,7 +69,8 @@
     width: 460px;
   }
 
-  .carousel-indicators {
+  .carousel-indicators, .carousel-control-prev,
+  .carousel-control-next {
     visibility: hidden;
   }
 
@@ -116,7 +116,6 @@
   .slidecontainer > p {
     text-align: center;
     padding: 10px 30px 0 0;
-    visibility: hidden;
   }
 
   footer {
