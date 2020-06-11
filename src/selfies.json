@@ -1,0 +1,80 @@
+[
+  {
+    "photo_id": "1",
+    "date": "8/15/2013",
+    "t_time": "t - 1 year",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2013_08_15.jpg"
+  },
+  {
+    "photo_id": "2",
+    "date": "7/6/2014",
+    "t_time": "t - 1 month",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2014_07_06.jpg"
+  },
+  {
+    "photo_id": "3",
+    "date": "11/27/2014",
+    "t_time": "3 months",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2014_11_27.jpg"
+  },
+  {
+    "photo_id": "4",
+    "date": "2/1/2015",
+    "t_time": "5 months",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2015_02_01.jpg"
+  },
+  {
+    "photo_id": "5",
+    "date": "8/1/2015",
+    "t_time": "11 months",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2015_08_01.jpg"
+  },
+  {
+    "photo_id": "6",
+    "date": "2/8/2016",
+    "t_time": "1 year, 5 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2016_02_08.jpg"
+  },
+  {
+    "photo_id": "7",
+    "date": "11/27/2016",
+    "t_time": "2 years, 3 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2016_11_27.jpg"
+  },
+  {
+    "photo_id": "8",
+    "date": "5/24/2017",
+    "t_time": "2 years, 9 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2017_05_24.jpg"
+  },
+  {
+    "photo_id": "9",
+    "date": "9/22/2017",
+    "t_time": "3 years, 1 month",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2017_09_22.jpg"
+  },
+  {
+    "photo_id": "10",
+    "date": "2/24/2018",
+    "t_time": "3 years, 6 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2018_02_24.jpg"
+  },
+  {
+    "photo_id": "11",
+    "date": "6/5/2018",
+    "t_time": "3 years, 9 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2018_06_05.jpg"
+  },
+  {
+    "photo_id": "12",
+    "date": "4/26/2019",
+    "t_time": "4 years, 8 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2019_04_26.jpg"
+  },
+  {
+    "photo_id": "13",
+    "date": "5/20/2020",
+    "t_time": "5 years, 9 mos",
+    "url": "https://selfieline.s3.us-east-2.amazonaws.com/2020_05_20.jpg"
+  }
+]

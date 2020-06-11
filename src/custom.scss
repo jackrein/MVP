@@ -5,7 +5,7 @@
 
   .app {
     background-color: lightblue;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
     font-family: 'Architects Daughter', cursive;
   }
 
@@ -68,9 +68,9 @@
     background-color: lightblue;
     width: 460px;
   }
-
-  .carousel-indicators, .carousel-control-prev,
-  .carousel-control-next {
+// , .carousel-control-prev,
+//   .carousel-control-next
+  .carousel-indicators {
     visibility: hidden;
   }
 

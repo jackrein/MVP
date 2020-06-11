@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import ControlledCarousel from './components/Carousel.jsx';
+import photodb from './selfies.json';
 import './custom.scss';
 
 class App extends React.Component {
@@ -15,19 +16,35 @@ class App extends React.Component {
     }
 
     this.aboutMe = this.aboutMe.bind(this);
+    this.clickPrev = this.clickPrev.bind(this);
+    this.clickNext = this.clickNext.bind(this);
     this.slide = this.slide.bind(this);
-  }
+  };
 
   componentDidMount() {
-    fetch('http://localhost:5000/photos')
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({ photos: data, currentPic: data[0] });
-      })
+    this.setState({ photos: photodb, currentPic: photodb[0] });
   };
+
+  // componentDidMount() {
+  //   fetch('http://localhost:5000/photos')
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       this.setState({ photos: data, currentPic: data[0] });
+  //     })
+  // };
 
   aboutMe() {
     this.setState({ show: !this.state.show })
+  };
+
+  clickPrev() {
+    console.log(this.state.currentPic);
+    this.setState({ currentPic: this.state.photos[this.state.photos.indexOf(this.state.currentPic) - 1] });
+  };
+
+  clickNext() {
+    this.setState({ currentPic: this.state.photos[this.state.photos.indexOf(this.state.currentPic) + 1] });
+    console.log(this.state.currentPic);
   };
 
   slide(e) {
@@ -57,7 +74,7 @@ class App extends React.Component {
         </Navbar>
         <p id="blurb" style={{ display: this.state.show ? "block" : "none" }}>This project is a reflection on my physical transition.
         It covers my first six years on testosterone. Click through to see how I've changed!</p>
-        <ControlledCarousel currentPic={this.state.currentPic} />
+        <ControlledCarousel currentPic={this.state.currentPic} clickPrev={this.clickPrev} clickNext={this.clickNext} />
         <div className="slidecontainer">
           <input type="range" min="0" max="70" defaultValue="0" className="slider" onChange={this.slide}/>
           <p>Time on T: <span id="label">{this.state.currentPic.t_time}</span></p>
