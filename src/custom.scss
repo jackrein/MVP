@@ -68,9 +68,10 @@
     background-color: lightblue;
     width: 460px;
   }
-// , .carousel-control-prev,
-//   .carousel-control-next
-  .carousel-indicators {
+
+  .carousel-indicators,
+  .carousel-control-prev,
+  .carousel-control-next {
     visibility: hidden;
   }
 
