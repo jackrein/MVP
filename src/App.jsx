@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import ControlledCarousel from './components/Carousel.jsx';
-import photodb from './selfies.json';
+// import photodb from './selfies.json';
 import './custom.scss';
 
 class App extends React.Component {
@@ -17,17 +17,17 @@ class App extends React.Component {
     this.aboutMe = this.aboutMe.bind(this);
   };
 
-  componentDidMount() {
-    this.setState({ photos: photodb });
-  };
-
   // componentDidMount() {
-  //   fetch('http://localhost:5000/photos')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       this.setState({ photos: data });
-  //     })
+  //   this.setState({ photos: photodb });
   // };
+
+  componentDidMount() {
+    fetch('http://localhost:5000/photos')
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({ photos: data });
+      })
+  };
 
   aboutMe() {
     this.setState({ show: !this.state.show })
