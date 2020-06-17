@@ -48,8 +48,9 @@ const ControlledCarousel = ({ pics }) => {
         </span>
       </Carousel>
       <div className="slidecontainer">
-        <input type="range" min="0" max="70" defaultValue="0" className="slider" onChange={changeSlide}/>
-        {/* <p>Time on T: <span id="label">{.t_time}</span></p> */}
+        <input type="range" min="0" max="70" defaultValue="0" id="slider" onChange={changeSlide}/>
+        <label for="slider">0</label><label for="slider" className="align-right">70</label>
+        <p>Months on T </p>
       </div>
     </div>
   );
