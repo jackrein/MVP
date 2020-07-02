@@ -1,3 +1,12 @@
+## About
+
+This project focused on quickly delivering a Minimum Viable Product and improving it through iterative development.<br />
+I made an interactive slideshow of my gender transition, linked below.
+
+## Launch App
+
+https://t-journey.herokuapp.com/
+
 ## Available Scripts
 
 In the project directory, you can run:
